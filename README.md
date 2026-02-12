@@ -22,6 +22,8 @@ Versão académica básica do jogo **Battleship**, desenvolvida como base para f
 
 O jogo **Discoveries Battleship Game** é jogado por dois jogadores.
 
+---
+
 ### 🗺️ Tabuleiros
 
 Cada jogador possui:
