@@ -97,7 +97,7 @@ Durante a época dos Descobrimentos Portugueses, diferentes tipos de embarcaçõ
 
 - **Barca**  
   Embarcação de porte médio, utilizada tanto para transporte como para apoio a expedições marítimas.
-  <img width="500" height="375" alt="image" src="https://github.com/user-attachments/assets/7338a77b-204f-4708-b48b-dac0af41f62a" />
+  <img width="282" height="221" alt="image" src="https://github.com/user-attachments/assets/667bc725-eb2b-4ed6-bb43-b6ef0f2199d6" />
 
 - **Barinel**  
   Antecessor da caravela, bastante usado no início dos Descobrimentos para transporte e reconhecimento marítimo.
