@@ -64,7 +64,7 @@ Depois de posicionados os navios:
 Ganha o jogo o primeiro jogador que:
 - Afundar **todos os navios da frota adversária**
 
-
+---
 
 ## Tipos de navios:
 | Batalha Naval | Descobrimentos | English | Dimensão | #Navios | 
