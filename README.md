@@ -77,5 +77,44 @@ Ganha o jogo o primeiro jogador que:
 | Navio de 2 canhões | Caravela | Caravel | 2 | 3 |
 | Submarino | Barca | Barge | 1 | 4 |  
 
+---
+
+### ℹ️ Navios históricos
+
+Durante a época dos Descobrimentos Portugueses, diferentes tipos de embarcações foram utilizados, cada um com características próprias adaptadas às necessidades de exploração, comércio e guerra.
+
+- **Caravelas**  
+  Embarcações leves e ágeis, com velas latinas triangulares. Ideais para exploração costeira e navegação em mares desconhecidos.
+  <img height="350" alt="image" src="https://github.com/user-attachments/assets/1fdb8842-f54e-4f64-8ea8-37710c786e97" />
+
+- **Carracas**
+  Grande navio oceânico dos séculos XV e XVI, antecessor do galeão. Possuía casco alto, vários conveses e grande capacidade de carga, sendo amplamente utilizado nas rotas     comerciais de longa distância, incluindo a Carreira da Índia.
+  <img height="350" alt="image" src="https://github.com/user-attachments/assets/410c1add-9011-426f-ba4c-d0c2748d2fbe" />
+
+- **Naus**  
+  Navios de grande porte, usados principalmente para longas viagens oceânicas e transporte de mercadorias e tripulação.
+  <img height="350" alt="image" src="https://github.com/user-attachments/assets/2b4fdea2-9472-4f54-aa00-724cc4e1a907" />
+
+- **Barca**  
+  Embarcação de porte médio, utilizada tanto para transporte como para apoio a expedições marítimas.
+  <img height="350" alt="image" src="https://github.com/user-attachments/assets/667bc725-eb2b-4ed6-bb43-b6ef0f2199d6" />
+
+- **Barinel**  
+  Antecessor da caravela, bastante usado no início dos Descobrimentos para transporte e reconhecimento marítimo.
+  <img height="350" alt="image" src="https://github.com/user-attachments/assets/c7880761-1508-4c03-967f-3d21ebd768e8" />
+
+- **Caravelão**  
+  Variante maior da caravela, combinando maior capacidade de carga com boa manobrabilidade.
+
+- **Galeão**  
+  Navio robusto e fortemente armado, utilizado tanto para guerra como para transporte de riquezas nas rotas oceânicas.  
+  <img height="350" alt="image" src="https://github.com/user-attachments/assets/48125ee4-5d86-4a0d-9fcb-1e2f84f2d9be" />
+
+- **Xaveco**  
+  Embarcação rápida e manobrável, muito usada no Mediterrâneo e posteriormente adaptada a contextos atlânticos.  
+  <img height="350" alt="image" src="https://github.com/user-attachments/assets/b5e12033-7479-4cc7-ad43-43b0ec785860" />
+
+- **Mais informação:**  
+  https://pt.wikipedia.org/wiki/Categoria:Embarca%C3%A7%C3%B5es_dos_Descobrimentos
 
 ---
