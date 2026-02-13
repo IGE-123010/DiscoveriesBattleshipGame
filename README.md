@@ -42,7 +42,7 @@ Os navios:
 
 Depois de posicionados os navios:
 
-1. Cada jogador, à vez, dispara **três tiros**
+1. Cada jogador, à vez, dispara **um tiro**
 2. Cada tiro é identificado por coordenadas (linha, coluna)
 3. O adversário deve indicar:
    - Se acertou ou falhou
