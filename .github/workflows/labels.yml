@@ -1,0 +1,35 @@
+name: Sync Labels
+on:
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  labeler:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Apply Labels
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "Deleting existing labels..."
+          # Fetch all labels and delete them
+          gh label list --limit 100 --json name --jq '.[].name' | while read -r old_label; do
+            echo "Deleting: $old_label"
+            gh label delete "$old_label" --confirm
+          done
+
+          echo "Creating new labels from labels.json..."
+          jq -c '.[]' .github/labels.json | while read -r label; do
+            NAME=$(echo $label | jq -r '.name')
+            COLOR=$(echo $label | jq -r '.color')
+            DESC=$(echo $label | jq -r '.description')
+
+            echo "Creating label: $NAME"
+            gh label create "$NAME" --color "$COLOR" --description "$DESC"
+          done
