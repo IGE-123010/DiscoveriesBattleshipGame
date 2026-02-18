@@ -1,0 +1,15 @@
+[
+  { "name": "priority: CRITICAL", "color": "B91C1C", "description": "CAUSE: Production down, security issue ACTION: Fix immediately" },
+  { "name": "priority: HIGH", "color": "FDE047", "description": "CAUSE: Major functionality broken ACTION: Address ASAP" },
+  { "name": "priority: MEDIUM", "color": "FEF9C3", "description": "CAUSE: Standard bugs/improvements ACTION: Normal flow" },
+  { "name": "priority: LOW", "color": "1D4ED8", "description": "CAUSE: Minor issues, UI polish ACTION: When time allows" },
+  { "name": "priority: REVISIT", "color": "D1D5DB", "description": "CAUSE: Valid idea with no timeline ACTION: Revisit later" },
+  { "name": "status: DUPLICATE", "color": "D1D5DB", "description": "This issue or pull request already exists" },
+  { "name": "status: INVALID", "color": "FDE047", "description": "This doesn't seem right" },
+  { "name": "status: NEEDS INFO", "color": "3730A3", "description": "Further details are required before work can begin" },
+  { "name": "status: WONTFIX", "color": "F9FAFB", "description": "Decision made not to work on this issue" },
+  { "name": "type: BUG", "color": "B91C1C", "description": "Something isn't working" },
+  { "name": "type: DOCUMENTATION", "color": "2563EB", "description": "Improvements or additions to documentation" },
+  { "name": "type: ENHANCEMENT", "color": "A5F3FC", "description": "New feature or request" },
+  { "name": "type: QUESTION", "color": "D946EF", "description": "Further information is requested" }
+]
