@@ -1,0 +1,15 @@
+name: PR Notification
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Informar equipa
+        run: |
+          echo "Pull Request aberta por ${{ github.actor }}"
+          echo "Branch: ${{ github.head_ref }}"
+          echo "Rever alterações antes de fazer merge."
