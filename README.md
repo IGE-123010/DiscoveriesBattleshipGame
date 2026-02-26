@@ -118,3 +118,21 @@ Durante a época dos Descobrimentos Portugueses, diferentes tipos de embarcaçõ
   https://pt.wikipedia.org/wiki/Categoria:Embarca%C3%A7%C3%B5es_dos_Descobrimentos
 
 ---
+
+## Respostas da ficha 1
+
+### Parte 1, Secção E, Exercício 3
+#### Product Backlog - o que é?
+O product backlog do projeto deve ser constituido por user stories, que devem ser divididas por secções ou módulos, permitindo, sempre que possível, que diferentes membros da equipa possam trabalhar e testar independentemente e simultaneamente nestas user stories, reduzindo e, idealmente, eliminando os tempos de espera por dependências.
+#### User Stories
+Cada user story descreve um conjunto de funcionalidades que o utilizador final quer ver implementadas, cuja prioridade deve ser ajustada às particularidades de cada projeto. Por norma, considera-se mais prioritário aquilo que presenta a base mínima funcional do software.
+Deste modo, apresenta-se na secção de issues um conjunto de user stories, criadas colaborativamente em grupo e que cobrem a grande maioria das funcionalidades que um utilizador final deveria querer observar.
+
+### Parte 1, Secção E, Exercício 6
+- Para escolher uma user story para mim próprio, devo selecionar a user story pretendida e usar a opção de assign, selecionando o meu utilizador.
+- Para indicar que esta user story já foi implementada, devemos selecionar a user story em questão e definir (opção "Mark as") o estado como completed.
+- Finalmente, quando o product owner desiste de uma user story, devemos etiquetar a user story com a label "WONTFIX", indicada para items cuja decisão foi de explicitamente não serem alvo de implementação e trabalho.
+
+### Parte 1, Secção D, Exercício 7
+
+### Parte 2, Secção C, Exercício 1
