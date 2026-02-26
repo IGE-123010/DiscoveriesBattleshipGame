@@ -153,3 +153,21 @@ Na secção de **Issues** do GitHub encontra-se o conjunto de user stories defin
 ### Parte 1, Secção D, Exercício 7
 
 ### Parte 2, Secção C, Exercício 1
+
+
+## Comparação: Web vs IDE
+
+Trabalhar via GitHub Web é mais adequado para:
+- Pequenas edições rápidas
+- Gestão de Issues e Pull Requests
+- Revisão de código
+- Operações simples
+
+Trabalhar via IDE (IntelliJ) é mais adequado para:
+- Desenvolvimento de código complexo
+- Refatoração
+- Debugging
+- Geração de documentação
+- Integração com ferramentas de build
+
+A abordagem ideal combina ambas: desenvolvimento no IDE e gestão colaborativa na plataforma web.
