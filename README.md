@@ -122,12 +122,29 @@ Durante a época dos Descobrimentos Portugueses, diferentes tipos de embarcaçõ
 ## Respostas da ficha 1
 
 ### Parte 1, Secção E, Exercício 3
-#### Product Backlog - o que é?
-O product backlog do projeto deve ser constituido por user stories, que devem ser divididas por secções ou módulos, permitindo, sempre que possível, que diferentes membros da equipa possam trabalhar e testar independentemente e simultaneamente nestas user stories, reduzindo e, idealmente, eliminando os tempos de espera por dependências.
-#### User Stories
-Cada user story descreve um conjunto de funcionalidades que o utilizador final quer ver implementadas, cuja prioridade deve ser ajustada às particularidades de cada projeto. Por norma, considera-se mais prioritário aquilo que presenta a base mínima funcional do software.
-Deste modo, apresenta-se na secção de issues um conjunto de user stories, criadas colaborativamente em grupo e que cobrem a grande maioria das funcionalidades que um utilizador final deveria querer observar.
+##  Product Backlog – o que é?
 
+O **Product Backlog** é a lista ordenada e priorizada de todos os requisitos e funcionalidades a implementar no projeto. No contexto deste trabalho, o backlog é constituído por um conjunto estruturado de **user stories**, organizadas por secções ou módulos funcionais.
+
+A divisão por módulos permite que diferentes membros da equipa possam trabalhar de forma independente e simultânea, reduzindo dependências técnicas e minimizando tempos de espera. Esta abordagem está alinhada com os princípios da metodologia **Scrum**, promovendo desenvolvimento incremental e colaborativo.
+
+O backlog é dinâmico, podendo ser atualizado e reordenado ao longo do projeto de acordo com a evolução das prioridades e necessidades identificadas.
+
+---
+
+##  User Stories
+
+Cada **user story** representa uma funcionalidade do ponto de vista do utilizador final, descrevendo o que este pretende realizar e com que objetivo.
+
+A formulação das user stories segue uma estrutura centrada no valor entregue ao utilizador:
+
+> **Como** [tipo de utilizador]  
+> **Quero** [funcionalidade]  
+> **Para** [benefício ou objetivo]
+
+A prioridade de cada user story deve refletir a sua importância para o funcionamento do sistema. De modo geral, são consideradas mais prioritárias as funcionalidades que constituem a **base mínima funcional do software**, ou seja, aquelas sem as quais o sistema não pode operar corretamente.
+
+Na secção de **Issues** do GitHub encontra-se o conjunto de user stories definidas colaborativamente pela equipa, procurando cobrir as principais funcionalidades do jogo e garantindo uma implementação incremental, organizada e alinhada com o enunciado do projeto.
 ### Parte 1, Secção E, Exercício 6
 - Para escolher uma user story para mim próprio, devo selecionar a user story pretendida e usar a opção de assign, selecionando o meu utilizador.
 - Para indicar que esta user story já foi implementada, devemos selecionar a user story em questão e definir (opção "Mark as") o estado como completed.
