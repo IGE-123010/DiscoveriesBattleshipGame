@@ -152,6 +152,12 @@ Na secção de **Issues** do GitHub encontra-se o conjunto de user stories defin
 
 ### Parte 1, Secção D, Exercício 7
 
+Após a criação do Pull Request e a realização do merge para a branch `main`, o grafo passou a apresentar um novo commit de merge.
+
+Observa-se que a branch criada para desenvolvimento divergiu temporariamente da `main`, contendo os commits realizados nesse ramo. Após o merge, o histórico mostra a integração desses commits na branch principal, unificando novamente as duas linhas de desenvolvimento.
+
+O commit de merge representa o ponto de convergência entre o ramo de trabalho e a `main`, garantindo que as alterações realizadas foram incorporadas no histórico principal do projeto.
+
 ### Parte 2, Secção C, Exercício 1
 
 
