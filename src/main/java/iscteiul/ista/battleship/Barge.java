@@ -1,21 +1,18 @@
 /**
- *
- */
-package iscteiul.ista.battleship;
-
-/**
  * Represents a Barge ship in the Battleship game.
- * 
+ *
  * A Barge is a ship with size 1, occupying a single position
  * on the game board.
  */
+package iscteiul.ista.battleship;
+
 public class Barge extends Ship {
-    
+
     /**
      * The fixed size of the Barge.
      */
     private static final Integer SIZE = 1;
-    
+
     /**
      * The name of this ship type.
      */
@@ -23,7 +20,7 @@ public class Barge extends Ship {
 
    /**
      * Constructs a new Barge with the specified bearing and starting position.
-     * 
+     *
      * Since a Barge has size 1, it occupies only the given position.
      *
      * @param bearing the orientation of the ship
