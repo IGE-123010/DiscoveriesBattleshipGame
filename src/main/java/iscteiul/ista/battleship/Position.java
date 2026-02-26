@@ -1,16 +1,13 @@
 /**
+ * Represents a position on the Battleship game board.
  *
+ * A position is identified by its row and column coordinates.
+ * It may be occupied by a ship and may have been hit by a shot.
  */
 package iscteiul.ista.battleship;
 
 import java.util.Objects;
 
-/**
- * Represents a position on the Battleship game board.
- * 
- * A position is identified by its row and column coordinates.
- * It may be occupied by a ship and may have been hit by a shot.
- */
 public class Position implements IPosition {
     private int row;
     private int column;
