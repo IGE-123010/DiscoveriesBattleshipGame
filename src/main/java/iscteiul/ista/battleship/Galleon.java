@@ -1,8 +1,5 @@
-
 package iscteiul.ista.battleship;
 
-import java.util.ArrayList;
-import java.util.List;
 /**
  * Represents the Galleon ship in the Discoveries Battleship Game.
  *
