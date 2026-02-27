@@ -1,22 +1,31 @@
-/**
- * Represents a position on the Battleship game board.
- *
- * A position is identified by its row and column coordinates.
- * It may be occupied by a ship and may have been hit by a shot.
- */
 package iscteiul.ista.battleship;
 
 import java.util.Objects;
 
+/**
+ * Represents a position on the Battleship game board.
+ *
+ * A position is defined by its row and column coordinates within the board.
+ * Each position keeps track of:
+ * - Whether it is occupied by a ship
+ * - Whether it has already been hit by a shot
+ *
+ * The Position class is a fundamental element of the game model,
+ * used by ships, the fleet, and the game logic to manage board state.
+ */
 public class Position implements IPosition {
+
     private int row;
     private int column;
     private boolean isOccupied;
     private boolean isHit;
 
     /**
-     * Constructs a new Position with the specified row and column.
-     * Initially, the position is not occupied and not hit.
+     * Creates a new position with the specified coordinates.
+     *
+     * The position is initially:
+     * - Not occupied by any ship
+     * - Not hit by any shot
      *
      * @param row the row index of the position
      * @param column the column index of the position
@@ -31,7 +40,7 @@ public class Position implements IPosition {
     /**
      * Returns the row index of this position.
      *
-     * @return the row index
+     * @return the row coordinate
      */
     @Override
     public int getRow() {
@@ -41,7 +50,7 @@ public class Position implements IPosition {
     /**
      * Returns the column index of this position.
      *
-     * @return the column index
+     * @return the column coordinate
      */
     @Override
     public int getColumn() {
@@ -49,9 +58,12 @@ public class Position implements IPosition {
     }
 
     /**
-     * Returns a hash code value for this position.
+     * Computes a hash code for this position.
      *
-     * @return the hash code based on row and column
+     * The hash code is based on the row, column, occupation state,
+     * and hit state.
+     *
+     * @return hash code value for this position
      */
     @Override
     public int hashCode() {
@@ -60,33 +72,44 @@ public class Position implements IPosition {
 
     /**
      * Compares this position with another object for equality.
-     * Two positions are considered equal if they have the same row and column.
      *
-     * @param otherPosition the object to compare
-     * @return true if both positions have the same coordinates, false otherwise
+     * Two positions are considered equal if they share the same
+     * row and column coordinates, independently of their state
+     * (occupied or hit).
+     *
+     * @param otherPosition the object to compare with
+     * @return true if both objects represent the same board coordinates,
+     *         false otherwise
      */
     @Override
     public boolean equals(Object otherPosition) {
         if (this == otherPosition)
             return true;
+
         if (otherPosition instanceof IPosition) {
             IPosition other = (IPosition) otherPosition;
-            return (this.getRow() == other.getRow() && this.getColumn() == other.getColumn());
-        } else {
-            return false;
+            return (this.getRow() == other.getRow() &&
+                    this.getColumn() == other.getColumn());
         }
+
+        return false;
     }
 
     /**
      * Determines whether this position is adjacent to another position.
-     * Adjacency includes horizontal, vertical, and diagonal neighbors.
+     *
+     * Adjacency includes:
+     * - Horizontal neighbors
+     * - Vertical neighbors
+     * - Diagonal neighbors
      *
      * @param other the position to compare with
      * @return true if the positions are adjacent, false otherwise
      */
     @Override
     public boolean isAdjacentTo(IPosition other) {
-        return (Math.abs(this.getRow() - other.getRow()) <= 1 && Math.abs(this.getColumn() - other.getColumn()) <= 1);
+        return (Math.abs(this.getRow() - other.getRow()) <= 1 &&
+                Math.abs(this.getColumn() - other.getColumn()) <= 1);
     }
 
     /**
@@ -98,7 +121,7 @@ public class Position implements IPosition {
     }
 
     /**
-     * Marks this position as hit.
+     * Marks this position as hit by a shot.
      */
     @Override
     public void shoot() {
@@ -106,9 +129,9 @@ public class Position implements IPosition {
     }
 
     /**
-     * Indicates whether this position is occupied by a ship.
+     * Indicates whether this position is currently occupied by a ship.
      *
-     * @return true if the position is occupied, false otherwise
+     * @return true if occupied, false otherwise
      */
     @Override
     public boolean isOccupied() {
@@ -116,9 +139,9 @@ public class Position implements IPosition {
     }
 
     /**
-     * Indicates whether this position has been hit.
+     * Indicates whether this position has already been hit.
      *
-     * @return true if the position has been hit, false otherwise
+     * @return true if the position was hit, false otherwise
      */
     @Override
     public boolean isHit() {
@@ -128,11 +151,10 @@ public class Position implements IPosition {
     /**
      * Returns a string representation of this position.
      *
-     * @return a string containing the row and column values
+     * @return a formatted string containing row and column values
      */
     @Override
     public String toString() {
         return ("Linha = " + row + " Coluna = " + column);
     }
-
 }

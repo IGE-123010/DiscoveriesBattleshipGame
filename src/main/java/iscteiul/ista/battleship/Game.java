@@ -14,8 +14,6 @@ import java.util.List;
  * 
  * The Game class delegates fleet-related logic to the {@link IFleet} 
  * implementation and focuses on game flow control.
- * 
- * @author ADM
  */
 public class Game implements IGame {
 
