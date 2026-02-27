@@ -3,13 +3,47 @@ name: PR Notification
 on:
   pull_request:
     types: [opened]
+    
+permissions:
+  pull-requests: write
 
 jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
       - name: Informar equipa
-        run: |
-          echo "Pull Request aberta por ${{ github.actor }}"
-          echo "Branch: ${{ github.head_ref }}"
-          echo "Rever alterações antes de fazer merge."
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const actor = context.actor;
+
+            const rotation = {
+              "IGE-123010": "IGE-123016",
+              "IGE-123016": "IGE-123023",
+              "IGE-123023": "IGE-123028",
+              "IGE-123028": "IGE-123010",
+            };
+
+            const nextUser = rotation[actor];
+
+            if (!nextUser) {
+              console.log(`Nenhum reviewer configurado para o autor ${actor}`);
+              return;
+            }
+
+            try {
+              await github.rest.pulls.requestReviewers({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: context.payload.pull_request.number,  // mais explícito e seguro
+                reviewers: [nextUser]
+              });
+
+              console.log(`Reviewer solicitado: ${nextUser} para o PR #${context.payload.pull_request.number}`);
+            } catch (error) {
+              console.error("Erro ao solicitar reviewer:", error);
+              if (error.status === 422) {
+                console.error("Possível causa: permissões insuficientes ou utilizador inválido");
+              }
+              throw error;
+            }

@@ -2,8 +2,6 @@ package iscteiul.ista.battleship;
 
 import java.util.ArrayList;
 import java.util.List;
-
-
 /**
  * Represents a Battleship game session.
  * 
