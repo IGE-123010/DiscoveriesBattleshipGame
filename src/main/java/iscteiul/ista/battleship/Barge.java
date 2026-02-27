@@ -1,11 +1,16 @@
+package iscteiul.ista.battleship;
+
 /**
  * Represents a Barge ship in the Battleship game.
  *
- * A Barge is a ship with size 1, occupying a single position
- * on the game board.
+ * A Barge is the smallest type of ship, with a fixed size of 1.
+ * It occupies a single position on the game board, independently
+ * of its {@link Compass} bearing.
+ *
+ * This class extends {@link Ship}, inheriting common ship behavior
+ * such as hit detection, floating state verification, and position
+ * management.
  */
-package iscteiul.ista.battleship;
-
 public class Barge extends Ship {
 
     /**
@@ -14,17 +19,19 @@ public class Barge extends Ship {
     private static final Integer SIZE = 1;
 
     /**
-     * The name of this ship type.
+     * The display name of this ship type.
      */
     private static final String NAME = "Barca";
 
-   /**
-     * Constructs a new Barge with the specified bearing and starting position.
+    /**
+     * Creates a new Barge with the specified bearing and starting position.
      *
-     * Since a Barge has size 1, it occupies only the given position.
+     * Since a Barge has size 1, it occupies only the provided position.
+     * The bearing does not affect its shape, but is passed to the
+     * superclass for consistency with other ship types.
      *
      * @param bearing the orientation of the ship
-     * @param pos the upper-left (starting) position of the ship
+     * @param pos     the starting position of the ship
      */
     public Barge(Compass bearing, IPosition pos) {
         super(Barge.NAME, bearing, pos);
@@ -32,13 +39,12 @@ public class Barge extends Ship {
     }
 
     /**
-     * Returns the size of the Barge.
+     * Returns the fixed size of the Barge.
      *
-     * @return the size of the ship (1)
+     * @return the size of this ship (1)
      */
     @Override
     public Integer getSize() {
         return SIZE;
     }
-
 }
