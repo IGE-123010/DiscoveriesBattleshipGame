@@ -4,20 +4,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Classe que representa a frota de um jogador.
+ * Represents a player's fleet in the Battleship game.
  *
- * A frota é composta por vários navios e é responsável por:
- * - adicionar navios ao tabuleiro
- * - verificar colisões
- * - obter navios por categoria
- * - verificar quais ainda estão a flutuar
+ * A Fleet is composed of multiple ships and is responsible for:
+ * - Adding ships to the board
+ * - Ensuring ships are placed within board boundaries
+ * - Preventing collisions or adjacency between ships
+ * - Retrieving ships by category
+ * - Tracking which ships are still floating
+ *
+ * The Fleet acts as a container and manager of ship instances,
+ * delegating ship-specific logic (such as hit detection and adjacency)
+ * to the {@link IShip} implementations.
  */
 public class Fleet implements IFleet {
 
     /**
-     * Imprime no ecrã uma lista de navios.
+     * Prints a list of ships to the console.
      *
-     * @param ships lista de navios a imprimir
+     * @param ships the list of ships to print
      */
     static void printShips(List<IShip> ships) {
         for (IShip ship : ships)
@@ -29,16 +34,16 @@ public class Fleet implements IFleet {
     private List<IShip> ships;
 
     /**
-     * Constrói uma frota vazia.
+     * Constructs an empty fleet.
      */
     public Fleet() {
         ships = new ArrayList<>();
     }
 
     /**
-     * Obtém a lista de navios da frota.
+     * Returns the list of ships currently in the fleet.
      *
-     * @return lista de navios
+     * @return list of ships
      */
     @Override
     public List<IShip> getShips() {
@@ -46,13 +51,15 @@ public class Fleet implements IFleet {
     }
 
     /**
-     * Adiciona um navio à frota se:
-     * - não ultrapassar o tamanho máximo
-     * - estiver dentro do tabuleiro
-     * - não houver risco de colisão
+     * Adds a ship to the fleet if all placement rules are satisfied:
+     * <ul>
+     *   <li>The fleet size limit is not exceeded</li>
+     *   <li>The ship is fully inside the board boundaries</li>
+     *   <li>There is no collision or adjacency with existing ships</li>
+     * </ul>
      *
-     * @param s navio a adicionar
-     * @return true se o navio foi adicionado com sucesso
+     * @param s the ship to add
+     * @return true if the ship was successfully added, false otherwise
      */
     @Override
     public boolean addShip(IShip s) {
@@ -65,10 +72,10 @@ public class Fleet implements IFleet {
     }
 
     /**
-     * Obtém todos os navios de uma determinada categoria.
+     * Returns all ships that belong to a given category.
      *
-     * @param category categoria pretendida
-     * @return lista de navios dessa categoria
+     * @param category the ship category
+     * @return list of ships matching the category
      */
     @Override
     public List<IShip> getShipsLike(String category) {
@@ -81,9 +88,12 @@ public class Fleet implements IFleet {
     }
 
     /**
-     * Obtém todos os navios que ainda não foram completamente afundados.
+     * Returns all ships that are still floating.
      *
-     * @return lista de navios ainda a flutuar
+     * A ship is considered floating if it has at least one
+     * unhit position.
+     *
+     * @return list of floating ships
      */
     @Override
     public List<IShip> getFloatingShips() {
@@ -96,10 +106,10 @@ public class Fleet implements IFleet {
     }
 
     /**
-     * Obtém o navio que ocupa uma determinada posição.
+     * Returns the ship occupying a given position, if any.
      *
-     * @param pos posição a verificar
-     * @return navio que ocupa essa posição ou null se não existir
+     * @param pos the position to check
+     * @return the ship occupying the position, or null if none exists
      */
     @Override
     public IShip shipAt(IPosition pos) {
@@ -110,10 +120,10 @@ public class Fleet implements IFleet {
     }
 
     /**
-     * Verifica se um navio está completamente dentro dos limites do tabuleiro.
+     * Checks whether a ship is completely inside the board boundaries.
      *
-     * @param s navio a verificar
-     * @return true se estiver dentro do tabuleiro
+     * @param s the ship to validate
+     * @return true if the ship is fully inside the board
      */
     private boolean isInsideBoard(IShip s) {
         return (s.getLeftMostPos() >= 0 && s.getRightMostPos() <= BOARD_SIZE - 1 &&
@@ -121,10 +131,11 @@ public class Fleet implements IFleet {
     }
 
     /**
-     * Verifica se existe risco de colisão ou proximidade com outros navios.
+     * Checks whether placing a ship would cause a collision
+     * or adjacency with existing ships.
      *
-     * @param s navio a verificar
-     * @return true se houver risco de colisão
+     * @param s the ship to validate
+     * @return true if there is a collision or proximity risk
      */
     private boolean colisionRisk(IShip s) {
         for (int i = 0; i < ships.size(); i++) {
@@ -135,8 +146,12 @@ public class Fleet implements IFleet {
     }
 
     /**
-     * Mostra o estado atual da frota.
-     * Imprime todos os navios e organiza-os por categoria.
+     * Prints the current fleet status.
+     *
+     * This includes:
+     * - All ships
+     * - Ships still floating
+     * - Ships grouped by category
      */
     public void printStatus() {
         printAllShips();
@@ -149,9 +164,9 @@ public class Fleet implements IFleet {
     }
 
     /**
-     * Imprime todos os navios de uma determinada categoria.
+     * Prints all ships belonging to a specific category.
      *
-     * @param category categoria dos navios a imprimir
+     * @param category the category of ships to print
      */
     public void printShipsByCategory(String category) {
         assert category != null;
@@ -159,14 +174,14 @@ public class Fleet implements IFleet {
     }
 
     /**
-     * Imprime apenas os navios que ainda estão a flutuar.
+     * Prints only the ships that are still floating.
      */
     public void printFloatingShips() {
         printShips(getFloatingShips());
     }
 
     /**
-     * Imprime todos os navios da frota.
+     * Prints all ships in the fleet.
      */
     void printAllShips() {
         printShips(ships);

@@ -1,3 +1,5 @@
+package iscteiul.ista.battleship;
+
 /**
  * Represents a frigate in the Battleship game.
  * <p>
@@ -5,8 +7,6 @@
  * that can be placed in different orientations on the board.
  * </p>
  */
-package iscteiul.ista.battleship;
-
 public class Frigate extends Ship {
 
     /**

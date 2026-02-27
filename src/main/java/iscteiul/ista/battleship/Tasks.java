@@ -1,14 +1,24 @@
-/**
- *
- */
 package iscteiul.ista.battleship;
 
 import java.util.Scanner;
-
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+/**
+ * Abstract class representing a ship in the Battleship game.
+ *
+ * A Ship has a category (galleon, frigate, carrack, caravel, barge), a bearing (orientation),
+ *   an initial position on the board, and a list of positions it occupies.
+ *
+ * This class provides common behavior shared by all ship types, including:
+ *   - Hit detection and sinking state
+ *   - Boundary and position calculations
+ *   - Collision and adjacency checks
+ *   - Shooting logic
+ *
+ * Concrete subclasses define specific ship types, including their size and how their positions
+ * are initialized based on the starting position and orientation.
+ */
 public class Tasks {
     private static final Logger LOGGER = LogManager.getLogger();
 

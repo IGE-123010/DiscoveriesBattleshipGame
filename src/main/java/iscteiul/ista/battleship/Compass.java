@@ -1,22 +1,3 @@
-/**
- * Enum representing the four cardinal directions (compass bearings) used in the Battleship game.
- *
- * This enum provides a type-safe way to represent directional bearings (North, South, East, West)
- * with support for conversion to/from single character representations. Each direction is associated
- * with a character code for compact representation.
- *
- * <p>Direction mappings:</p>
- * <ul>
- *   <li>NORTH ('n') - North direction</li>
- *   <li>SOUTH ('s') - South direction</li>
- *   <li>EAST ('e') - East direction</li>
- *   <li>WEST ('o') - West direction</li>
- *   <li>UNKNOWN ('u') - Unknown or invalid direction</li>
- * </ul>
- *
- * @author fba
- * @version 1.0
- */
 package iscteiul.ista.battleship;
 
 /**

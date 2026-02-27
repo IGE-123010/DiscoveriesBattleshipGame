@@ -1,15 +1,29 @@
-/**
- *
- */
 package iscteiul.ista.battleship;
 
+/**
+ * Represents a Carrack-type ship in the Battleship game.
+ *
+ * This class is a specialized type of {@link Ship} with a fixed size
+ * and name. It manages the ship's positions based on its initial
+ * location and bearing (orientation).
+ *
+ * A Carrack occupies 3 consecutive positions on the board, arranged
+ * either vertically (NORTH/SOUTH) or horizontally (EAST/WEST).
+ */
 public class Carrack extends Ship {
+
     private static final Integer SIZE = 3;
     private static final String NAME = "Nau";
 
     /**
-     * @param bearing
-     * @param pos
+     * Creates a new Carrack ship at a given position and bearing.
+     *
+     * The constructor calculates all board positions occupied by the ship
+     * based on the initial position and the orientation.
+     *
+     * @param bearing the direction the ship is facing (NORTH, SOUTH, EAST, WEST)
+     * @param pos the starting position of the ship's bow (front)
+     * @throws IllegalArgumentException if the bearing is invalid
      */
     public Carrack(Compass bearing, IPosition pos) throws IllegalArgumentException {
         super(Carrack.NAME, bearing, pos);
@@ -29,14 +43,13 @@ public class Carrack extends Ship {
         }
     }
 
-    /*
-     * (non-Javadoc)
+    /**
+     * Returns the size of the Carrack ship.
      *
-     * @see battleship.Ship#getSize()
+     * @return the number of board positions occupied by this ship
      */
     @Override
     public Integer getSize() {
         return Carrack.SIZE;
     }
-
 }
