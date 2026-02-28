@@ -1,15 +1,37 @@
 /**
- *
+ * Represents a Caravel ship in the Battleship game.
+ * <p>
+ * A Caravel has a fixed size of 2 positions and can be placed
+ * either vertically (NORTH or SOUTH) or horizontally (EAST or WEST)
+ * starting from a given initial position.
+ * </p>
+ * <p>
+ * The ship's occupied positions are calculated based on the provided
+ * bearing and starting position.
+ * </p>
  */
 package iscteiul.ista.battleship;
 
 public class Caravel extends Ship {
+
+    /**
+     * The fixed size of the Caravel.
+     */
     private static final Integer SIZE = 2;
+
+    /**
+     * The name of the ship.
+     */
     private static final String NAME = "Caravela";
 
     /**
-     * @param bearing the bearing where the Caravel heads to
-     * @param pos     initial point for positioning the Caravel
+     * Constructs a Caravel with a given bearing and starting position.
+     *
+     * @param bearing the direction in which the Caravel is oriented
+     *                (NORTH, SOUTH, EAST, or WEST)
+     * @param pos     the initial position of the Caravel
+     * @throws NullPointerException     if the bearing is null
+     * @throws IllegalArgumentException if the bearing is invalid
      */
     public Caravel(Compass bearing, IPosition pos) throws NullPointerException, IllegalArgumentException {
         super(Caravel.NAME, bearing, pos);
@@ -34,10 +56,10 @@ public class Caravel extends Ship {
 
     }
 
-    /*
-     * (non-Javadoc)
+    /**
+     * Returns the size of the Caravel.
      *
-     * @see battleship.Ship#getSize()
+     * @return the fixed size of this ship (2)
      */
     @Override
     public Integer getSize() {
