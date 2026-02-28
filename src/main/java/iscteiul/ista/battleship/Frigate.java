@@ -27,9 +27,9 @@ public class Frigate extends Ship {
      * </p>
      *
      * @param bearing the orientation of the frigate (NORTH, SOUTH, EAST, or WEST)
-     * @param pos the starting position of the frigate on the board
+     * @param pos the starting board position of the frigate
      *
-     * @throws IllegalArgumentException if the given orientation is invalid
+     * @throws IllegalArgumentException if bearing is invalid
      */
     public Frigate(Compass bearing, IPosition pos) throws IllegalArgumentException {
         super(Frigate.NAME, bearing, pos);
