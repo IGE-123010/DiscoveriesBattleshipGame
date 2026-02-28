@@ -5,15 +5,15 @@ import java.util.List;
 
 /**
  * Represents a Battleship game session.
- * 
+ *
  * This class is responsible for managing the interaction between the player
  * and the fleet, including:
  * - Processing shots
  * - Tracking statistics (hits, sinks, invalid and repeated shots)
  * - Providing information about the current game state
  * - Displaying board representations
- * 
- * The Game class delegates fleet-related logic to the {@link IFleet} 
+ *
+ * The Game class delegates fleet-related logic to the {@link IFleet}
  * implementation and focuses on game flow control.
  */
 public class Game implements IGame {
