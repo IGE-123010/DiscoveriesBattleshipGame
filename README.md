@@ -122,7 +122,8 @@ Durante a época dos Descobrimentos Portugueses, diferentes tipos de embarcaçõ
 ## Respostas da ficha 1
 
 ### Parte 1, Secção E, Exercício 3
-##  Product Backlog – o que é?
+
+####  Product Backlog – o que é?
 
 O **Product Backlog** é a lista ordenada e priorizada de todos os requisitos e funcionalidades a implementar no projeto. No contexto deste trabalho, o backlog é constituído por um conjunto estruturado de **user stories**, organizadas por secções ou módulos funcionais.
 
@@ -130,9 +131,7 @@ A divisão por módulos permite que diferentes membros da equipa possam trabalha
 
 O backlog é dinâmico, podendo ser atualizado e reordenado ao longo do projeto de acordo com a evolução das prioridades e necessidades identificadas.
 
----
-
-##  User Stories
+####  User Stories
 
 Cada **user story** representa uma funcionalidade do ponto de vista do utilizador final, descrevendo o que este pretende realizar e com que objetivo.
 
@@ -160,8 +159,7 @@ O commit de merge representa o ponto de convergência entre o ramo de trabalho e
 
 ### Parte 2, Secção C, Exercício 1
 
-
-## Comparação: Web vs IDE
+#### Comparação: Web vs IDE
 
 Trabalhar via GitHub Web é mais adequado para:
 - Pequenas edições rápidas
@@ -177,3 +175,26 @@ Trabalhar via IDE (IntelliJ) é mais adequado para:
 - Integração com ferramentas de build
 
 A abordagem ideal combina ambas: desenvolvimento no IDE e gestão colaborativa na plataforma web.
+
+### Parte 2, Secção G, Exercício 2
+
+Para simular alterações concorrentes sobre o mesmo ficheiro, escolhemos o método `toString()` da classe Ship. O objetivo foi provocar um conflito de merge através de modificações distintas na mesma secção do código.
+
+Inicialmente, o método apresentava a seguinte implementação:
+Java```@Override
+public String toString() {
+    return "[" + category + " " + bearing + " " + pos + "]";
+}```
+
+De seguida, foram realizadas duas alterações independentes:
+- Primeira alteração:
+Java```return "[" + category + " facing " + bearing + "]";```
+- Segunda alteração:
+Java```return "[" + category + " at " + pos + "]";```
+
+A primeira modificação foi integrada sem conflitos. No entanto, quando se tentou integrar a segunda alteração, o sistema de controlo de versões Git não conseguiu efetuar o merge automaticamente, uma vez que ambas as alterações incidiam sobre a mesma linha do método.
+
+Como consequência, foi gerado um conflito de merge. Para o resolver, foi necessário:
+- Identificar os marcadores de conflito inseridos automaticamente pelo Git no ficheiro
+- Remover esses marcadores
+- Definir manualmente qual deveria ser a versão final do método (optando por uma das versões ou combinando ambas).
