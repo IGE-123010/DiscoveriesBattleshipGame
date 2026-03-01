@@ -181,16 +181,22 @@ A abordagem ideal combina ambas: desenvolvimento no IDE e gestão colaborativa n
 Para simular alterações concorrentes sobre o mesmo ficheiro, escolhemos o método `toString()` da classe Ship. O objetivo foi provocar um conflito de merge através de modificações distintas na mesma secção do código.
 
 Inicialmente, o método apresentava a seguinte implementação:
-Java```@Override
+```Java
+@Override
 public String toString() {
     return "[" + category + " " + bearing + " " + pos + "]";
-}```
+}
+```
 
 De seguida, foram realizadas duas alterações independentes:
 - Primeira alteração:
-Java```return "[" + category + " facing " + bearing + "]";```
+```Java
+return "[" + category + " facing " + bearing + "]";
+```
 - Segunda alteração:
-Java```return "[" + category + " at " + pos + "]";```
+```Java
+return "[" + category + " at " + pos + "]";
+```
 
 A primeira modificação foi integrada sem conflitos. No entanto, quando se tentou integrar a segunda alteração, o sistema de controlo de versões Git não conseguiu efetuar o merge automaticamente, uma vez que ambas as alterações incidiam sobre a mesma linha do método.
 
