@@ -1,3 +1,4 @@
+
   # 🚢 Battleship
 
 Versão académica básica do jogo **Battleship**, desenvolvida como base para futuros desenvolvimentos.
@@ -15,6 +16,24 @@ Versão académica básica do jogo **Battleship**, desenvolvida como base para f
 | 123016  | Tiago Pires           | IGE   |
 | 123010  | Manuel Albuquerque   | IGE   |
 
+
+---
+
+## 📌 Índice
+
+- Regras do Jogo
+  - Tabuleiros
+  - Fase de Ataque
+  - Registo das Jogadas
+  - Condição de Vitória
+- Tipos de navios
+  - Navios históricos
+- Respostas da ficha 1
+  - Parte 1, Secção E, Exercício 3
+  - Parte 1, Secção E, Exercício 6
+  - Parte 1, Secção D, Exercício 7
+  - Parte 2, Secção C, Exercício 1
+  - Parte 2, Secção G, Exercício 2
 
 ---
 
