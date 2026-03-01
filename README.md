@@ -149,6 +149,9 @@ Na secção de **Issues** do GitHub encontra-se o conjunto de user stories defin
 - Para indicar que esta user story já foi implementada, devemos selecionar a user story em questão e definir (opção "Mark as") o estado como completed.
 - Finalmente, quando o product owner desiste de uma user story, devemos etiquetar a user story com a label "WONTFIX", indicada para items cuja decisão foi de explicitamente não serem alvo de implementação e trabalho.
 
+[Ver mais detalhes no closed Issue #10]([https://github.com/IGE-123010/issues/10](https://github.com/IGE-123010/DiscoveriesBattleshipGame/issues/10))
+
+
 ### Parte 1, Secção D, Exercício 7
 
 Após a criação do Pull Request e a realização do merge para a branch `main`, o grafo passou a apresentar um novo commit de merge.
@@ -204,3 +207,5 @@ Como consequência, foi gerado um conflito de merge. Para o resolver, foi necess
 - Identificar os marcadores de conflito inseridos automaticamente pelo Git no ficheiro
 - Remover esses marcadores
 - Definir manualmente qual deveria ser a versão final do método (optando por uma das versões ou combinando ambas).
+
+[Ver mais detalhes no closed Issue #27]([https://github.com/IGE-123010/issues/27](https://github.com/IGE-123010/DiscoveriesBattleshipGame/issues/27))
