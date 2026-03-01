@@ -8,10 +8,10 @@ import iscteiul.ista.battleship.Tasks;
  * @author adrianolopes
  * @author miguelgoulao
  */
-public class App
-{
-    public static void main( String[] args )
-    {
+public class App {
+    public App() {}
+
+    public static void main( String[] args ) {
 
         System.out.printf("\n***  Battleship Game ***\n");
 
